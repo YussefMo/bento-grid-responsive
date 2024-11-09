@@ -1,0 +1,452 @@
+/* define grid area */
+.bento-item1{grid-area: schedule;}.bento-item2{grid-area: faster;}.bento-item3{grid-area: social;}.bento-item4{grid-area: content;}.bento-item5{grid-area: manage;}.bento-item6{grid-area: maintain;}.bento-item7{grid-area: p56;}.bento-item8{grid-area: grow;}
+/* main configuration */
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+*::selection
+{
+    background-color: lightseagreen;
+}
+:root
+{
+    font-size: 16px;
+    text-align: left;
+    color: black;
+    --Purple-100: hsl(254, 88%, 90%);
+    --Purple-500: hsl(256, 67%, 59%);
+    --Yellow-100: hsl(31, 66%, 93%);
+    --Yellow-500: hsl(39, 100%, 71%);
+    --White: rgb(255, 255, 255);
+}
+/* import font */
+@font-face 
+{
+    font-family: 'myfont';
+    src: url(./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf);
+}
+/* font family */
+body
+{
+    font-family: 'myfont', serif;
+    background-color: lightsteelblue;
+}
+/* dfine colores */
+.whitet
+{
+    color: var(--White);
+}
+.white
+{
+    background-color: var(--White);
+}
+.purple1
+{
+    background-color: var(--Purple-100);
+}
+.purple5t
+{
+    color: var(--Purple-500);
+}
+.purple5
+{
+    background-color: var(--Purple-500);
+}
+.yellow1
+{
+    background-color: var(--Yellow-100);
+}
+.yellow5t
+{
+    color: var(--Yellow-500);
+}
+.yellow5
+{
+    background-color: var(--Yellow-500);
+}
+/* main contaner configuration */
+.bento-grid
+{
+    height: 100vh;
+    width: 70vw;
+    display: grid;
+    grid-template-areas:
+    'schedule faster faster social'
+    'schedule faster faster social'
+    'schedule faster faster social'
+    'schedule faster faster social'
+    'schedule manage maintain social'
+    'content manage maintain social'
+    'content manage maintain social'
+    'content p56 grow grow'
+    'content p56 grow grow'
+    'content p56 grow grow';
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(10 , 1fr);
+    gap: 40px;
+    margin: 4% 16%;
+}
+/* get round corrner for the items */
+.bento-grid div
+{
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 500ms;
+}
+.bento-grid div:hover
+{
+    transform: scale(1.05);
+    box-shadow: 0px 5px 20px 20px rgba(0, 0, 0, 0.1);
+}
+/* 1st item style */
+.bento-item1 h1
+{
+    font-size: 2.5rem;
+    width: 250px;
+    margin-left: 25px;
+    margin-top: 50px;
+}
+.bento-item1 img
+{
+    margin-top: 25px;
+    margin-left: 25px;
+    height: 100px;
+    width: 200px;
+}
+/* 2nd item style */
+.bento-item2
+{
+    text-align: center;
+}
+.bento-item2 h1
+{
+    font-size: 3.5rem;
+    width: 450px;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+.fa-star
+{
+    font-size: 1.5rem;
+    margin: 30px 6px 0px 6px;
+}
+.bento-item2 .dis
+{
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+/* 3rd item style */
+.bento-item3
+{
+    position: relative;
+}
+.bento-item3 h1
+{
+    width: 200px;
+    margin-top: 40px;
+    margin-left: 35px;
+}
+.bento-item3 img
+{
+    position: absolute;
+    top: 125px;
+    left: 35px;
+    height: 380px;
+    width: 420px;
+}
+.bento-item3 p
+{
+    font-size: 1.3rem;
+    margin-top: 390px;
+    margin-left: 35px;
+}
+/* 4th item style */
+.bento-item4 h1
+{
+    font-size: 2.3rem;
+    width: 200px;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+.bento-item4 img
+{
+    margin-top: 25px;
+    margin-left: 25px;
+    height: 250px;
+    width: 260px;
+}
+/* 5th item style */
+.bento-item5
+{
+    position: relative;
+}
+.bento-item5 img
+{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    height: 70px;
+    width: 370px;
+}
+.bento-item5 h1
+{
+    margin-top: 80px;
+    margin-left: 25px;
+}
+/* 6th item style */
+.bento-item6
+{
+    position: relative;
+}
+.bento-item6 h1
+{
+    font-size: 1.7rem;
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.bento-item6 img
+{
+    position: absolute;
+    width: 260px;
+    left: 20px;
+}
+/* 7th item style */
+.bento-item7
+{
+    position: relative;
+}
+.bento-item7 h1
+{
+    font-size: 4rem;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.bento-item7 p
+{
+    font-size: 1.3rem;
+    margin-left: 30px;
+}
+.bento-item7 img
+{
+    position: absolute;
+    height: 70px;
+    top: 170px;
+    left: 40px;
+}
+/* 8th item style */
+.bento-item8
+{
+    position: relative;
+}
+.bento-item8 h1
+{
+    position: absolute;
+    font-size: 2.5rem;
+    width: 350px;
+    top: 50px;
+    left: 300px;
+}
+.bento-item8 img
+{
+    position: absolute;
+    height: 220px;
+    top: 20px;
+    left: 30px;
+}
+@media screen and (max-width:500px)
+{
+    /* configure top space */
+    .phone-space
+    {
+        height: 50px;
+    }
+    /* change main grid to flex configuration */
+    .bento-grid
+    {
+        margin: 0;
+        display: flex;
+        flex-flow: row wrap;
+        width: 100vw;
+        height: 2550px;
+        justify-content: space-around;
+    }
+    /* flex chid configuration */
+    .bento-grid div
+    {
+        width: 95%;
+    }
+    /* 1st style */
+    .bento-grid .o1
+    {
+        order: 1;
+        height: 260px;
+        text-align: center;
+    }
+    .o1 h1
+    {
+        margin: 0;
+        width: 60%;
+        font-size: 2rem;
+        margin-top: 20px;
+        margin-left: 20%;
+    }
+    .o1 .stars
+    {
+        margin: 0;
+    }
+    .o1 .dis
+    {
+        margin: 0;
+        margin-top: 5px;
+    }
+    /* 2nd style */
+    .bento-grid .o2
+    {
+        order: 2;
+        height: 200px;
+    }
+    .o2 img
+    {
+        left: 10px;
+        height: 60px;
+        width: 300px;
+    }
+    .o2 h1
+    {
+        margin: 0;
+        font-size: 1.5rem;
+        margin-top: 100px;
+        margin-left: 20px;
+    }
+    /* 3rd style */
+    .bento-grid .o3
+    {
+        order: 3;
+        height: 200px;
+    }
+    .o3 h1
+    {
+        margin: 0;
+        width: 90%;
+        font-size: 1.5rem;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    .o3 img
+    {
+        top: 80px;
+        width: 220px;
+        height: 150px;
+    }
+    /* 4th style */
+    .bento-grid .o4
+    {
+        order: 4;
+        height: 450px;
+        text-align: center;
+    }
+    .o4 h1
+    {
+        margin: 0;
+        width: 100%;
+        font-size: 1.4rem;
+        margin-top: 10px;
+    }
+    .o4 img
+    {
+        height: 280px;
+        width: 300px;
+        top: 60px;
+        left: 5%;
+    }
+    .o4 p
+    {
+        margin: 0;
+        margin-top: 310px;
+        font-size: 1.3rem;
+    }
+    /* 5th style */
+    .bento-grid .o5
+    {
+        margin: 0;
+        order: 5;
+        height: 400px;
+        text-align: center;
+    }
+    .o5 img
+    {
+        left: 18%;
+    }
+    .o5 h1
+    {
+        font-size: 2.2rem;
+        top: 260px;
+        left: 0px;
+    }
+    /* 6th style */
+    .bento-grid .o6
+    {
+        order: 6;
+        height: 200px;
+    }
+    .o6 h1
+    {
+        margin: 0;
+        margin-left: 20px;
+    }
+    .o6 p
+    {
+        margin: 0;
+        margin-left: 20px;
+    }
+    .o6 img
+    {
+        left: 20px;
+        top: 120px;
+    }
+    /* 7th style */
+    .bento-grid .o7
+    {
+        order: 7;
+        height: 200px;
+    }
+    .o7 h1
+    {
+        margin: 0;
+        width: 90%;
+        font-size: 1.7rem;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+    .o7 img
+    {
+        margin: 0;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    /* 8th style */
+    .bento-grid .o8
+    {
+        order: 8;
+        height: 300px;
+    }
+    .o8 h1
+    {
+        margin: 0;
+        width: 90%;
+        font-size: 1.7rem;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    .o8 img
+    {
+        margin: 0;
+        margin-left: 20px;
+        margin-top: 10px;
+        height: 190px;
+        width: 200px;
+    }
+}
